@@ -21,4 +21,4 @@ ReactDOM.render(
         </ApolloProvider>
     </Router>,
     document.getElementById("root")
-)
+);

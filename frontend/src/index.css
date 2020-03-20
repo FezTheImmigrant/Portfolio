@@ -1,10 +1,25 @@
-a {
-    text-decoration: none;
+html,body {
+  height: 100%;
+  background-color: black;
 }
 
 h1 {
-    font-family: Staatliches;
-    font-size: 120px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 60px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  max-width: 90%;
+}
+h2 {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 60px;
+}
+h3 {
+  margin-top: 2%;
+  font-family: 'Rubik', sans-serif;
+  max-width: 63%;
 }
 
 #category {
@@ -20,7 +35,7 @@ h1 {
 }
 
 #banner {
-  margin: 20px;
+  margin: 50px;
   height: 800px;
 }
 
