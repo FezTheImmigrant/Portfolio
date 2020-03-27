@@ -1,17 +1,12 @@
 import React from "react";
-
 import ReactDOM from "react-dom";
-
 import {ApolloProvider } from "react-apollo";
-
-import App from "./containers/App";
-
+import App from "./App";
 import client from "./utils/apolloClient";
 
-//Router refers to how an app's end points (URI) respond to client requests
 import {BrowserRouter as Router} from "react-router-dom"; 
 
-import "./index.css";
+import "./index.css"
 
 //Wrap app inside router
 ReactDOM.render(
