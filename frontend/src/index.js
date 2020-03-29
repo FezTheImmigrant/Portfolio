@@ -6,7 +6,7 @@ import client from "./utils/apolloClient";
 
 import {BrowserRouter as Router} from "react-router-dom"; 
 
-import "./index.css"
+import "./assets/main.css"
 
 //Wrap app inside router
 ReactDOM.render(

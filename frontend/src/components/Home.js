@@ -13,7 +13,9 @@ export class Home extends Component {
                             the workplace. This website is home to my studies and achievements.</h3>
                 </li>
                 <li>
-                    <img style={headshotImageStyle} src={HeadShot} />
+                    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                        <img style={headshotImageStyle} src={HeadShot} />
+                    </div>
                 </li>
 
             </ul>
