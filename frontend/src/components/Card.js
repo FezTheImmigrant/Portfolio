@@ -7,16 +7,19 @@ export class Card extends Component {
     render() {
         const article = this.props.article;
         return (
-            <Link to={`/article/${article.id}`} >
-                <img
+            <div>
+                <a href={`/article/${article.id}`} className="flex hover:no-underline">
+                    <img
+                    className="image-pulse rounded-md"
                     src={"http://localhost:1337" + article.image.url}
                     alt={article.image.url}
-                    height="100"
-                />
-                <p id="title" className="uk-text-large">
-                    {article.title}
-                </p>
-            </Link>
+                    />
+
+                    <p id="title" className="mt-5 ml-20 text-white text-2xl">
+                        {article.title}
+                    </p>
+                </a>
+            </div>
         );
     }
 }

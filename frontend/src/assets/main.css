@@ -10912,8 +10912,31 @@ video {
   transition-duration: 1000ms;
 }
 
+* {
+  font-family: 'Rubik', sans-serif !important;
+}
+
 body {
   background-color: black;
+}
+
+.image-pulse {
+  width: 33.33%;
+  transition: transform 2s;
+}
+
+.image-pulse:hover {
+  transform: scale(1.1)
+}
+
+@keyframes magnified {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
 }
 
 @media (min-width: 640px) {

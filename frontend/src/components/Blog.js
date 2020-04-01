@@ -10,7 +10,7 @@ export class Blog extends Component {
         const leftArticles = articles.slice(0, leftArticlesCount);
         const rightArticles = articles.slice(leftArticlesCount, articles.length);
         return (
-            <div>
+            <div className="flex mx-20 mt-20">
                 <div>
                     {leftArticles.map((article, i) => {
                         return <Card article={article} key={`article__${article.id}`} />;
