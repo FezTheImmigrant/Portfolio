@@ -13,13 +13,13 @@ export default function BlogPostContainer() {
       {({ data: { article } }) => {
         return (
           <React.Fragment>
-            <h1>{article.title}</h1>
+            <h1 className="text-white text-6xl text-center mt-20">{article.title}</h1>
 
-            <img src={process.env.REACT_APP_BACKEND_URL + article.image.url} />
+            <img className="w-1/2 mt-5 mx-auto rounded-md border-solid border-2" src={process.env.REACT_APP_BACKEND_URL + article.image.url} />
 
-            <ReactMarkdown source={article.content} />
-            <p>
-              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+            <ReactMarkdown className="text-white mx-20 mt-10 text-xl" source={article.content} />
+            <p className="mt-10">
+              <Moment className="text-white mx-10 text-xl" format="MMM Do YYYY">{article.published_at}</Moment>
             </p>
 
           </React.Fragment>

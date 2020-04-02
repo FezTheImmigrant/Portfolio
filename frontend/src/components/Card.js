@@ -8,9 +8,9 @@ export class Card extends Component {
         const article = this.props.article;
         return (
             <div>
-                <a href={`/article/${article.id}`} className="flex hover:no-underline">
+                <a href={`/article/${article.id}`} className="flex hover:no-underline mb-20">
                     <img
-                    className="image-pulse rounded-md"
+                    className="image-pulse rounded-md border-2 border-black hover:border-white"
                     src={"http://localhost:1337" + article.image.url}
                     alt={article.image.url}
                     />
