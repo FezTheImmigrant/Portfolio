@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 const BLOG_QUERY = gql` 
-query Articles {
-    articles {
+query Posts {
+    posts {
         id
         title
         image{

@@ -6,8 +6,7 @@ import BlogHeader from "../resources/blogHeader.jpg"
 
 import Query from "../components/Query";
 
-import BLOG_QUERY from "../queries/BlogQuery";
-
+import BLOG_QUERY from "../queries/BlogQuery"; 
 
 export class BlogContainer extends Component {
     render() {
@@ -21,8 +20,8 @@ export class BlogContainer extends Component {
 
                 </div>
                 <Query query={BLOG_QUERY}>
-                    {({ data: { articles } }) => {
-                        return <Blog articles={articles} />;
+                    {({ data: { posts } }) => {
+                        return <Blog posts={posts} />;
                     }}
                 </Query>
             </div>

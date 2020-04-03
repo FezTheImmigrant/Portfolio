@@ -13,7 +13,7 @@ export class App extends Component {
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/blog" component={BlogContainer} exact />
-                    <Route path="/article/:id" component={BlogPostContainer} exact />
+                    <Route path="/post/:id" component={BlogPostContainer} exact />
                 </Switch>
             </div>
         );

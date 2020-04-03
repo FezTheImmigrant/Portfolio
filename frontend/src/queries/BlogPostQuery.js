@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 const BLOG_POST_QUERY = gql`
-query Articles($id: ID!) {
-    article (id: $id) {
+query Posts($id: ID!) {
+    post (id: $id) {
         id
         title
         content

@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "articles",
+  "collectionName": "posts",
   "info": {
-    "name": "article"
+    "name": "Post"
   },
   "options": {
     "increments": true,
