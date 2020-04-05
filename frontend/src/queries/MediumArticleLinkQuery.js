@@ -2,8 +2,8 @@
 import gql from "graphql-tag";
 
 const MEDIUM_ARTICLES_LINK_QUERY = gql`
-query Medium_Article($id: ID!) {
-    medium_article (id: $id) {
+query Articles {
+    articles {
         id
         title
         url

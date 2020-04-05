@@ -2,23 +2,47 @@ import React, { Component } from 'react'
 import HeadShot from '../resources/headshot.jpg'
 import BlogHeader from '../resources/blog.gif'
 import Article from '../resources/article.gif'
+import Articles from '../components/Articles'
 import Contact from '../resources/contact.gif';
 import Query from "../components/Query";
 import MEDIUM_ARTICLES_LINK_QUERY from "../queries/MediumArticleLinkQuery";
 
+function ToggleArticles(props) {
+    var articles = props.articles;
+    var isToggledOn = props.isArticleListToggledOn;
+
+    if (isToggledOn) {
+        return (<Articles articles={articles}/>);
+    }
+
+    return <React.Fragment/>
+    
+}
+
 export class Menu extends Component {
+
+    state = {
+        isArticleListToggledOn: false,
+    };
+
+    handleClick = () => {
+        this.setState( state => ({
+            isArticleListToggledOn: !state.isArticleListToggledOn
+        }));
+    }
     render() {
         return (
-            <div className="right-100 w-full z-10 fade-in-no-delay-fast absolute flex">
-                <div className=" w-1/3 ml-auto flex justify-end rounded-md">
-                    
-                    <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
-                        {({ data: { articles } }) => {
-                            
-                            return <p>{articles[0].title}</p >;
-                        }}
-                    </Query>
-                    <div className="bg-black rounded-md mr-5 w-full">
+            <div className=" w-full z-10 fade-in-no-delay-fast absolute">
+                <div className="ml-auto flex justify-end rounded-md">
+                    <div className="flex mt-32">
+                        <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
+                            {({ data: { articles } }) => {
+                                return (<ToggleArticles articles={articles} isArticleListToggledOn={this.state.isArticleListToggledOn} />);
+                                return (<Articles articles={articles}/>)
+                            }}
+                        </Query>
+                    </div>
+                    <div className=" black_transparent mr-5 w-1/4">
                         <div className="flex">
                             <a href="/" className="hover:no-underline w-1/2">
                                 <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md" style={headShotStyle}>
@@ -32,22 +56,19 @@ export class Menu extends Component {
                             </a>
                         </div>
                         <div className="flex mt-1">
-                            <a href="/" className="hover:no-underline w-1/2">
+                            <button onClick={this.handleClick} className="hover:no-underline w-1/2 focus:outline-none">
                                 <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md" style={articleStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
                                 </div>
-                            </a>
+                            </button>
                             <a href="/" className="hover:no-underline w-1/2">
                                 <div className="m1-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={contactStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
                                 </div>
                             </a>
                         </div>
-
                     </div>
-
                 </div>
-                
             </div>
         )
     }

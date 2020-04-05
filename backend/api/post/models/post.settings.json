@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "posts",
   "info": {
-    "name": "Post"
+    "name": "post"
   },
   "options": {
     "increments": true,
