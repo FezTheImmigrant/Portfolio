@@ -38,7 +38,6 @@ export class Menu extends Component {
                         <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
                             {({ data: { articles } }) => {
                                 return (<ToggleArticles articles={articles} isArticleListToggledOn={this.state.isArticleListToggledOn} />);
-                                return (<Articles articles={articles}/>)
                             }}
                         </Query>
                     </div>
