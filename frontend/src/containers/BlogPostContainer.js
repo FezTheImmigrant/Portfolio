@@ -12,17 +12,23 @@ export default function BlogPostContainer() {
     <Query query={BLOG_POST_QUERY} id={id}>
       {({ data: { post } }) => {
         return (
-          <React.Fragment>
-            <h1 className="text-white text-6xl text-center mt-20">{post.title}</h1>
+          <div className="bg-black">
+            <div className="flex">
+              <h1 className="text-white text-6xl ml-32 w-1/3 absolute transform translate-y-32 z-10">{post.title}</h1>
+              <img className="w-2/3 ml-auto mr-5 transform translate-y-20" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />
+            </div>
+            <div className="custom-black mx-24 mb-10 flex">
+              <div className="w-full ml-20 pt-48">
+                <div className="text-white">
+                  Date Created
+                </div>
+                <Moment className="text-gray-700 text-sm" format="MMM Do YYYY">{post.published_at}</Moment>
+              </div>
+              <ReactMarkdown className="text-gray-400 font-serif mr-40 pt-48 text-l" source={post.content} />
+            </div>
 
-            <img className="w-1/2 mt-5 mx-auto rounded-md border-solid border-2" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />
 
-            <ReactMarkdown className="text-white mx-20 mt-10 text-xl" source={post.content} />
-            <p className="mt-10">
-              <Moment className="text-white mx-10 text-xl" format="MMM Do YYYY">{post.published_at}</Moment>
-            </p>
-
-          </React.Fragment>
+          </div>
         );
       }}
     </Query>

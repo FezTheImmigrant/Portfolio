@@ -1,28 +1,54 @@
 import React, { Component } from "react";
-import Arrow from "../resources/arrow.svg";
+import Moment from "react-moment";
 
-import {Link} from "react-router-dom";
+
+function ToggleTitle(props) {
+    var isMouseOverImage = props.isMouseOverImage;
+    var post = props.post;
+
+    if (isMouseOverImage) {
+        return (
+            <div>
+                <Moment className="absolute text-white top-center text-2xl pointer-events-none fade-in-no-delay-fast mt-5" format="MMM Do YYYY">{post.published_at}</Moment>
+                <p className="absolute text-white center text-3xl text-center pointer-events-none fade-in-no-delay-fast">{post.title}</p>
+            </div>
+        );
+    }
+    return <React.Fragment/>
+}
 
 
 export class RightCard extends Component {
+    state = {
+        isMouseOverImage: false,
+    };
+
+    handleHover = () => {
+        this.setState( state => ({
+            isMouseOverImage: true
+        }));
+    }
+    handleUnHover = () => {
+        this.setState( state => ({
+            isMouseOverImage: false
+        }));
+    }
     render() {
         const post = this.props.post;
         return (
-            <div className="flex justify-end mt-10 mr-10">
-                <p id="title" className="my-auto mr-10 text-white text-2xl">
-                    {post.title}
-                    <a href={`/post/${post.id}`} className="flex justify-end menu-pulse hover:no-underline mt-5">
-                        <img src={Arrow} />
-                        <p className="text-base ml-1 text-white">Read More</p>
+            <div className="w-1/2">
+                <div className=" relative mt-20 blog-card mr-0">
+                    <a href={`/post/${post.id}`}>
+                        <img
+                            className=" rounded-md border-2 border-black w-full h-full dark-on-hover"
+                            onMouseEnter={this.handleHover}
+                            onMouseOut={this.handleUnHover}
+                            src={"http://localhost:1337" + post.image.url}
+                            alt={post.image.url}
+                        />
                     </a>
-                </p>
-                <a href={`/post/${post.id}`} className="w-2/6">
-                    <img
-                    className="image-pulse rounded-md border-2 border-black hover:border-white w-full"
-                    src={"http://localhost:1337" + post.image.url}
-                    alt={post.image.url}
-                    />
-                </a>
+                    <ToggleTitle isMouseOverImage={this.state.isMouseOverImage} post={post} />
+                </div>
             </div>
         );
     }
