@@ -13,18 +13,18 @@ export default function BlogPostContainer() {
       {({ data: { post } }) => {
         return (
           <div className="bg-black">
-            <div className="flex">
-              <h1 className="text-white text-6xl ml-32 w-1/3 absolute transform translate-y-32 z-10">{post.title}</h1>
+            <div className="flex fade-in-no-delay">
+              <h1 className="text-white text-6xl ml-48 w-2/5 absolute transform translate-y-32 z-10">{post.title}</h1>
               <img className="w-2/3 ml-auto mr-5 transform translate-y-20" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />
             </div>
             <div className="custom-black mx-24 mb-10 flex">
               <div className="w-full ml-20 pt-48">
-                <div className="text-white">
+                <div className="text-white fade-in-short-delay">
                   Date Created
                 </div>
-                <Moment className="text-gray-700 text-sm" format="MMM Do YYYY">{post.published_at}</Moment>
+                <Moment className="text-gray-700 text-sm fade-in-short-delay" format="MMM Do YYYY">{post.published_at}</Moment>
               </div>
-              <ReactMarkdown className="text-gray-400 font-serif mr-40 pt-48 text-l" source={post.content} />
+              <ReactMarkdown className="text-gray-400 mr-40 pt-48 text-l fade-in-short-delay" source={post.content} />
             </div>
 
 

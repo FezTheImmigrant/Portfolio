@@ -10913,11 +10913,15 @@ video {
 }
 
 * {
+  font-family: 'Noto Serif' , serif !important;
+}
+
+.rubik-font {
   font-family: 'Rubik', sans-serif !important;
 }
 
 body {
-  background-color: black;
+  background-color: black !important;
 }
 
 p {
@@ -10942,6 +10946,13 @@ p {
 
 .fade-in-no-delay {
   animation: fadeInAnimation normal 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fade-in-no-delay-25 {
+  animation: fadeInAnimation25 normal 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -10977,6 +10988,16 @@ p {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation25 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.25;
   }
 }
 

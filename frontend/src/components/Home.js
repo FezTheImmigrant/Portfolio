@@ -4,7 +4,7 @@ import HeadShot from "../resources/headshot.jpg"
 export class Home extends Component {
     render () {
         return (
-            <div className="mt-20 ml-20 flex">
+            <div className="py-20 ml-20 flex">
                 <div className="mt-20 fade-in-no-delay">
                     <h1 className="text-white text-6xl">Hey I'm Sergio,</h1>
                     <h1 className="text-white text-6xl">Machine Learning Engineer.</h1>

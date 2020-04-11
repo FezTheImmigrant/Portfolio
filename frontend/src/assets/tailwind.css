@@ -5,10 +5,13 @@
 @tailwind utilities;
 
 * {
+    font-family: 'Noto Serif' , serif !important;
+}
+.rubik-font {
     font-family: 'Rubik', sans-serif !important;
 }
 body {
-    background-color: black;
+    background-color: black !important;
 }
 
 p {

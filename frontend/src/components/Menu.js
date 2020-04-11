@@ -32,7 +32,7 @@ export class Menu extends Component {
     }
     render() {
         return (
-            <div className=" w-full z-10 fade-in-no-delay-fast absolute">
+            <div className=" w-full mt-20 z-10 fade-in-no-delay-fast fixed">
                 <div className="ml-auto flex justify-end rounded-md">
                     <div className="flex mt-32">
                         <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
