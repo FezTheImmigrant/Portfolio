@@ -12,7 +12,7 @@ export default function BlogPostContainer() {
     <Query query={BLOG_POST_QUERY} id={id}>
       {({ data: { post } }) => {
         return (
-          <div className="bg-black">
+          <div className="bg-black min-h-screen pt-20">
             <div className="flex fade-in-no-delay">
               <h1 className="text-white text-6xl ml-48 w-2/5 absolute transform translate-y-32 z-10">{post.title}</h1>
               <img className="w-2/3 ml-auto mr-5 transform translate-y-20" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />

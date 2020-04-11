@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HeadShot from '../resources/headshot.jpg'
+import HeadShot from '../resources/headshot.png'
 import BlogHeader from '../resources/blog.gif'
 import Article from '../resources/article.gif'
 import Articles from '../components/Articles'
@@ -60,7 +60,7 @@ export class Menu extends Component {
                                     <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
                                 </div>
                             </button>
-                            <a href="/" className="hover:no-underline w-1/2">
+                            <a href="/contact" className="hover:no-underline w-1/2">
                                 <div className="m1-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={contactStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
                                 </div>

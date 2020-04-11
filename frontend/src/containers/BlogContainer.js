@@ -2,8 +2,6 @@ import React, { Component } from "react";
 
 import Blog from "../components/Blog";
 
-import BlogHeader from "../resources/blogHeader.jpg"
-
 import Query from "../components/Query";
 
 import BLOG_QUERY from "../queries/BlogQuery"; 
@@ -11,7 +9,7 @@ import BLOG_QUERY from "../queries/BlogQuery";
 export class BlogContainer extends Component {
     render() {
         return (
-            <div className="py-20">
+            <div className="pt-40 min-h-screen">
                 <h1 className="text-gray-700 text-6xl text-center fade-in-no-delay"> Machine Learning Blog </h1>
                 <div className="text-gray-300 text-xl text-center w-3/5 ml-32 transform translate-x-48 fade-in-no-delay mb-10">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -25,11 +23,6 @@ export class BlogContainer extends Component {
             </div>
         );
     }
-}
-
-const blogHeaderStyle = {
-    backgroundImage: `url(${BlogHeader})`,
-    backgroundColor: 'whited'
 }
 
 export default BlogContainer;
