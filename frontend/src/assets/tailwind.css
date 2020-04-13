@@ -88,6 +88,25 @@ p {
      } 
 }
 
+@media (min-width:600px) {
+    .headshot {
+        width: 480px;
+        height: 480px;
+    }
+}
+@media (min-width:450px) and (max-width:600px) {
+    .headshot {
+        width: 380px;
+        height: 380px;
+    }
+}
+@media (min-width:0px) and (max-width:450px) {
+    .headshot {
+        width: 280px;
+        height: 280px;
+    }
+}
+
 .black_transparent {
     background-color: rgba(0, 0, 0, 0.856);
 }

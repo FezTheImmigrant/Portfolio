@@ -5,7 +5,7 @@ export class Articles extends Component {
     render() {
         const articles = this.props.articles;
         return (
-            <div className="text-4xl black_transparent rounded-l-md text-right fade-in-no-delay">
+            <div className="text-4xl black_transparent rounded-l-md text-right fade-in-no-delay pt-2">
                 <ul className="h-40 overflow-hidden overflow-y-scroll mr-1" id="style-1">
                     {articles.map((article, i) => {
                         return (

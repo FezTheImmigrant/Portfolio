@@ -15,11 +15,13 @@ export class BlogContainer extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis viverra nibh cras pulvinar. In fermentum posuere urna nec tincidunt.
                 </div>
-                <Query query={BLOG_QUERY}>
-                    {({ data: { posts } }) => {
-                        return <Blog posts={posts} />;
-                    }}
-                </Query>
+                <div className="mx-auto">
+                    <Query query={BLOG_QUERY}>
+                        {({ data: { posts } }) => {
+                            return <Blog posts={posts} />;
+                        }}
+                    </Query>
+                </div>
             </div>
         );
     }

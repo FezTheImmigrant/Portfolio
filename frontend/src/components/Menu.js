@@ -34,13 +34,6 @@ export class Menu extends Component {
         return (
             <div className=" w-full mt-20 z-10 fade-in-no-delay-fast fixed">
                 <div className="ml-auto flex justify-end rounded-md">
-                    <div className="flex mt-32">
-                        <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
-                            {({ data: { articles } }) => {
-                                return (<ToggleArticles articles={articles} isArticleListToggledOn={this.state.isArticleListToggledOn} />);
-                            }}
-                        </Query>
-                    </div>
                     <div className=" black_transparent mr-5 w-1/4">
                         <div className="flex">
                             <a href="/" className="hover:no-underline w-1/2">
@@ -67,6 +60,13 @@ export class Menu extends Component {
                             </a>
                         </div>
                     </div>
+                </div>
+                <div className="flex justify-end mr-5">
+                    <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
+                        {({ data: { articles } }) => {
+                            return (<ToggleArticles articles={articles} isArticleListToggledOn={this.state.isArticleListToggledOn} />);
+                        }}
+                    </Query>
                 </div>
             </div>
         )

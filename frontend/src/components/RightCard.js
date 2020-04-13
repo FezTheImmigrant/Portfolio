@@ -36,8 +36,8 @@ export class RightCard extends Component {
     render() {
         const post = this.props.post;
         return (
-            <div className="w-1/2">
-                <div className=" relative mt-20 blog-card mr-0">
+            <div className="w-1/2 flex justify-center transform -translate-x-10">
+                <div className=" relative mt-20 blog-card">
                     <a href={`/post/${post.id}`}>
                         <img
                             className=" rounded-md border-2 border-black w-full h-full dark-on-hover"

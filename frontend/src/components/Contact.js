@@ -7,7 +7,7 @@ class Contact extends Component {
             <React.Fragment>
                 <div className="w-1/2 mx-auto py-auto text-center text-white text-6xl pt-56 rubik-font min-h-screen fade-in-no-delay">
                     sorozc0612@yahoo.com
-                    <div className="rubik-font text-2xl pt-20">
+                    <div className="rubik-font text-2xl pt-10">
                             Aurora, Colorado
                         <div className="rubik-font">
                             United States
