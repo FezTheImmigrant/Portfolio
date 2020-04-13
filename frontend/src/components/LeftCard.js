@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import Arrow from "../resources/arrow.svg";
 import Moment from "react-moment";
-import {Link} from "react-router-dom";
-
 
 function ToggleTitle(props) {
     var isMouseOverImage = props.isMouseOverImage;
@@ -18,7 +15,6 @@ function ToggleTitle(props) {
     }
 
     return <React.Fragment/>
-    
 }
 
 

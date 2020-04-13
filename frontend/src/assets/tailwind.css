@@ -39,6 +39,23 @@ p {
     opacity: 0;
 }
 
+.arrow-pulse {
+    animation: pulseAnimation infinite 3s;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.25;
+    }
+
+}
+
 .fade-in-no-delay-fast {
     animation: fadeInAnimation normal 1s;
     animation-iteration-count: 1; 
@@ -121,6 +138,6 @@ p {
 }
 
 .scikit-logo-size {
-    width: 40px;
+    width: 43px;
     height: 30px;
 }

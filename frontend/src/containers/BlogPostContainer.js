@@ -24,7 +24,7 @@ export default function BlogPostContainer() {
                 </div>
                 <Moment className="text-gray-700 text-sm fade-in-short-delay" format="MMM Do YYYY">{post.published_at}</Moment>
               </div>
-              <ReactMarkdown className="text-gray-400 mr-40 pt-48 text-l fade-in-short-delay" source={post.content} />
+              <ReactMarkdown className="text-gray-400 mr-40 pt-48 py-20 text-l fade-in-short-delay" source={post.content} />
             </div>
 
 
