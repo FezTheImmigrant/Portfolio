@@ -13,22 +13,22 @@ export default class Footer extends Component {
         return (
             <div className="h-1/4 custom-black min-h-full mt-20 fade-in-no-delay">
                 <div className="flex justify-center w-full">
-                    <div className="mt-5 flex">
-                    <a href="https://medium.com/@sorozco0612" className = "w-10 h-10 mx-5">
+                    <div className="bound:mx-0 mt-5 flex">
+                        <a href="https://medium.com/@sorozco0612" className="w-10 h-10 bound:mx-5 mx-2">
                             <img src={Medium} />
-                    </a>
-                    <a href="https://github.com/FezTheImmigrant"className="w-16 h-10 mx-5 transform -translate-y-2">
+                        </a>
+                        <a href="https://github.com/FezTheImmigrant" className="w-16 h-10 bound:mx-5 mx-2 transform -translate-y-2">
                             <img src={Github} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/sergio-orozco-51b057159/" className="w-10 h-10 mx-5">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sergio-orozco-51b057159/" className="w-10 h-10 bound:mx-5 mx-2">
                             <img src={LinkedIn} />
-                    </a>
-                    <a className="mx-5 w-10 h-8">
+                        </a>
+                        <a className="bound:mx-5 mx-2 w-10 h-8">
                             <img className="w-full h-full" src={File} />
-                    </a>
-                    <a href="/contact" className="mx-5 w-10 h-8 mt-1">
+                        </a>
+                        <a href="/contact" className="bound:mx-5 mx-2 w-10 h-8 mt-1">
                             <img className="w-full h-full" src={Mail} />
-                    </a>
+                        </a>
                     </div>
                 </div>
                 <div className="flex justify-center w-full">

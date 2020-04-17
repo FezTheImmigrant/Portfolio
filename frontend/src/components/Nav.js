@@ -19,13 +19,13 @@ export class Nav extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="text-white text-xl flex w-full fade-in-no-delay fixed z-40">
-          <div className="mt-8 mb-0 transform translate-x-4 justify-start">
-            <a className=" border-solid border-2 rounded py-0 px-2 border-white text-black bg-white
+        <div className="text-white text-xl flex justify-between w-full fade-in-no-delay fixed z-40">
+          <div className="mt-8 mb-0">
+            <a className="ml-5 border-solid border-2 rounded py-0 px-2 border-white text-black bg-white
                         transition duration-500 hover:bg-black hover:border-black hover:text-white
                         hover:no-underline" href="/">S</a>
           </div>
-          <button className="mt-8 mr-8 focus:outline-none ml-auto" onClick={this.handleButtonClick}>
+          <button className="bound:mr-5 mr-16 mt-8 focus:outline-none" onClick={this.handleButtonClick}>
             <img src={Hamburger} />
           </button>
 

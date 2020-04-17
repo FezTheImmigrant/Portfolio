@@ -34,26 +34,26 @@ export class Menu extends Component {
         return (
             <div className=" w-full mt-20 z-10 fade-in-no-delay-fast fixed">
                 <div className="ml-auto flex justify-end rounded-md">
-                    <div className=" black_transparent mr-5 w-1/4">
-                        <div className="flex">
-                            <a href="/" className="hover:no-underline w-1/2">
-                                <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md" style={headShotStyle}>
+                    <div className=" black_transparent mr-5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
+                        <div className="sm:flex">
+                            <a href="/" className="hover:no-underline sm:w-1/2 w-full">
+                                <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md " style={headShotStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Home</h1>
                                 </div>
                             </a>
-                            <a href="/blog" className="hover:no-underline w-1/2">
+                            <a href="/blog" className="hover:no-underline sm:w-1/2 w-full">
                                 <div className=" ml-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={blogHeaderStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Blog</h1>
                                 </div>
                             </a>
                         </div>
-                        <div className="flex mt-1">
-                            <button onClick={this.handleClick} className="hover:no-underline w-1/2 focus:outline-none">
+                        <div className="sm:flex mt-1">
+                            <button onClick={this.handleClick} className="hover:no-underline sm:w-1/2 w-full focus:outline-none">
                                 <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md" style={articleStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
                                 </div>
                             </button>
-                            <a href="/contact" className="hover:no-underline w-1/2">
+                            <a href="/contact" className="hover:no-underline sm:w-1/2 w-full">
                                 <div className="m1-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={contactStyle}>
                                     <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
                                 </div>
