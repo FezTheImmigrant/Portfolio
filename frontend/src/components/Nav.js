@@ -25,7 +25,7 @@ export class Nav extends Component {
                         transition duration-500 hover:bg-black hover:border-black hover:text-white
                         hover:no-underline" href="/">S</a>
           </div>
-          <button className="bound:mr-5 mr-16 mt-8 focus:outline-none" onClick={this.handleButtonClick}>
+          <button className="bound:mr-5 mr-10 mt-8 focus:outline-none" onClick={this.handleButtonClick}>
             <img src={Hamburger} />
           </button>
 
