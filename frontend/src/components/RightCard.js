@@ -6,7 +6,7 @@ function ToggleTitle(props) {
     var isMouseOverImage = props.isMouseOverImage;
     var post = props.post;
 
-    if (isMouseOverImage) {
+    if (isMouseOverImage || window.innerWidth < 1024) {
         return (
             <div>
                 <Moment className="absolute text-white top-center text-2xl pointer-events-none fade-in-no-delay-fast mt-5" format="MMM Do YYYY">{post.published_at}</Moment>
@@ -36,11 +36,11 @@ export class RightCard extends Component {
     render() {
         const post = this.props.post;
         return (
-            <div className="w-1/2 flex justify-center transform -translate-x-10">
+            <div className="lg:w-1/2 w-full flex justify-center transform lg:-translate-x-10">
                 <div className=" relative mt-20 blog-card">
                     <a href={`/post/${post.id}`}>
                         <img
-                            className=" rounded-md border-2 border-black w-full h-full dark-on-hover"
+                            className=" rounded-md border-2 border-black w-full h-full lg:hover:opacity-50"
                             onMouseEnter={this.handleHover}
                             onMouseOut={this.handleUnHover}
                             src={"http://localhost:1337" + post.image.url}

@@ -22,7 +22,7 @@ export class Blog extends Component {
 
         return (
             <div className="fade-in-short-delay">
-                <div className="flex flex-wrap mx-auto">
+                <div className="lg:flex flex-wrap">
                     {posts.map((post,i) => {
                         return <LeftOrRightCard post={post} indexValue={i}/>
                     })}

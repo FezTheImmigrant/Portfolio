@@ -56,11 +56,39 @@ p {
 
 }
 
+.opacity-fade-in {
+    animation: fadeInAnimationRelative normal 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    opacity: 0.5;
+}
+.opacity-fade-out {
+    animation: fadeOutAnimationRelative normal 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOutAnimationRelative { 
+    to {
+        opacity: 0.5;
+    }
+}
+@keyframes fadeInAnimationRelative { 
+    to {
+        opacity: 1;
+    }
+}
+
 .fade-in-no-delay-fast {
     animation: fadeInAnimation normal 1s;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
     opacity: 0;
+}
+
+.fade-out-no-delay-fast {
+    animation: fadeOutAnimation normal 1s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
 }
 
 .fade-in-short-delay{
@@ -88,6 +116,12 @@ p {
      } 
 }
 
+@keyframes fadeOutAnimation { 
+    to {
+        opacity: 0;
+    }
+}
+
 @media (min-width:600px) {
     .headshot {
         width: 480px;
@@ -105,6 +139,29 @@ p {
         width: 280px;
         height: 280px;
     }
+}
+
+@media (min-width:0px) and (max-width:400px) {
+    .blog-card {
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
+@media (min-width:400px) and (max-width:550px) {
+    .blog-card {
+        width: 340px;
+        height: 340px;
+    }
+
+}
+@media (min-width:550px) {
+    .blog-card {
+        width: 480px;
+        height: 480px;
+    }
+
 }
 
 .black_transparent {
@@ -144,11 +201,6 @@ p {
     top: 0%;
     left: 50%;
     transform: translate(-50%,0);
-}
-
-.blog-card {
-    width: 480px;
-    height: 480px;
 }
 
 .logo-size {
