@@ -10980,28 +10980,18 @@ p {
 }
 
 .opacity-fade-in {
-  animation: fadeInAnimationRelative normal 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.opacity-fade-out-50 {
   opacity: 0.5;
+  transition: opacity 1s linear;
 }
 
 .opacity-fade-out {
-  animation: fadeOutAnimationRelative normal 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOutAnimationRelative {
-  to {
-    opacity: 0.5;
-  }
-}
-
-@keyframes fadeInAnimationRelative {
-  to {
-    opacity: 1;
-  }
+  opacity: 0.5;
+  transition: opacity 1s linear;
 }
 
 .fade-in-no-delay-fast {

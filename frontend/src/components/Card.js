@@ -6,20 +6,13 @@ function ToggleTitle(props) {
     var isInView = props.isInView
     var post = props.post;
 
-    if ((/*window.innerWidth > 1024 &&*/ isMouseOverImage) || (window.innerWidth < 1024 && isInView )) {
-        return (
-            <div>
-                <Moment className="absolute text-white top-center text-2xl pointer-events-none fade-in-no-delay-fast mt-5" format="MMM Do YYYY">{post.published_at}</Moment>
-                <p className="absolute text-white center text-3xl text-center pointer-events-none fade-in-no-delay-fast">{post.title}</p>
-            </div>
-        );
-    }
-        return (
-            <div>
-                <Moment className="absolute text-white top-center text-2xl pointer-events-none fade-out-no-delay-fast mt-5" format="MMM Do YYYY">{post.published_at}</Moment>
-                <p className="absolute text-white center text-3xl text-center pointer-events-none fade-out-no-delay-fast">{post.title}</p>
-            </div>
-        );
+    var fade = isMouseOverImage || (window.innerWidth < 1024 && isInView) ? " fade-in-no-delay-fast" : " fade-out-no-delay-fast";
+    return (
+        <div>
+            <Moment className={"absolute text-white top-center text-2xl pointer-events-none mt-5" + fade} format="MMM Do YYYY">{post.published_at}</Moment>
+            <p className={"absolute text-white center text-3xl text-center pointer-events-none" + fade}>{post.title}</p>
+        </div>
+    );
 }
 
 function isScrolledIntoView(elem) {
@@ -31,7 +24,7 @@ function isScrolledIntoView(elem) {
 }
 
 
-export class LeftCard extends Component {
+export class Card extends Component {
     constructor(props) {
         super(props);
         document.addEventListener('scroll', this.handleScroll,true);
@@ -61,12 +54,15 @@ export class LeftCard extends Component {
 
     render() {
         const post = this.props.post;
+        const position = this.props.isLeft ? " lg:translate-x-10" : " lg:-translate-x-10";
+        const margin = this.props.isLeft ? " mt-10" : " mt-20"
+
         return (
-            <div className="lg:w-1/2 w-full flex justify-center transform lg:translate-x-10">
-                <div className="relative mt-10 blog-card">
+            <div className={"lg:w-1/2 w-full flex justify-center transform" + position}>
+                <div className={"relative blog-card" + margin}>
                     <a href={`/post/${post.id}`} id={"card"+post.id}>
                         <img
-                            className={"rounded-md border-2 border-black w-full h-full lg:hover:opacity-50 duration-1000" + (window.innerWidth < 1024 ? (this.state.isInView ? " opacity-fade-out": " opacity-fade-in") : "")}
+                            className={"rounded-md w-full h-full" + (window.innerWidth < 1024 ? (this.state.isInView || this.state.isMouseOverImage ? " opacity-fade-out-50": " opacity-fade-in") : this.state.isMouseOverImage ? " opacity-fade-out-50" : " opacity-fade-in")}
                             onMouseEnter={this.handleHover}
                             onMouseOut={this.handleUnHover}
                             src={"http://localhost:1337" + post.image.url}
@@ -79,12 +75,4 @@ export class LeftCard extends Component {
         );
     }
 }
-
-const opacityHalf = {
-    opacity: 0.5
-}
-const opacityFull = {
-    opacity: 1
-}
-
-export default LeftCard;
+export default Card;

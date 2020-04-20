@@ -1,19 +1,6 @@
 import React, { Component } from "react";
 
-import LeftCard from "./LeftCard";
-import RightCard from "./RightCard";
-
-function LeftOrRightCard(props) {
-    const indexValue = props.indexValue;
-    const post = props.post;
-
-    if (indexValue % 2 === 0) {
-        return <LeftCard post={post} key={`posts_${post.id}`} />;
-    }
-    else {
-        return <RightCard post={post} key={`posts_${post.id}`} />
-    }
-}
+import Card from "./Card";
 
 export class Blog extends Component {
 
@@ -24,7 +11,7 @@ export class Blog extends Component {
             <div className="fade-in-short-delay">
                 <div className="lg:flex flex-wrap">
                     {posts.map((post,i) => {
-                        return <LeftOrRightCard post={post} indexValue={i}/>
+                        return <Card post={post} isLeft={i % 2 === 0} key={`posts_${post.id}`}/>
                     })}
                 </div>
             </div>
