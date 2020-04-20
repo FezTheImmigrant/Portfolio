@@ -11065,6 +11065,14 @@ p {
     width: 280px;
     height: 280px;
   }
+
+  .blog-card-date {
+    font-size: 0.875rem;
+  }
+
+  .blog-card-title {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width:400px) and (max-width:550px) {
@@ -11072,12 +11080,28 @@ p {
     width: 340px;
     height: 340px;
   }
+
+  .blog-card-date {
+    font-size: 1.125rem;
+  }
+
+  .blog-card-title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width:550px) {
   .blog-card {
     width: 480px;
     height: 480px;
+  }
+
+  .blog-card-date {
+    font-size: 1.5rem;
+  }
+
+  .blog-card-title {
+    font-size: 1.875rem;
   }
 }
 

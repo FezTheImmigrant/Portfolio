@@ -9,8 +9,8 @@ function ToggleTitle(props) {
     var fade = isMouseOverImage || (window.innerWidth < 1024 && isInView) ? " fade-in-no-delay-fast" : " fade-out-no-delay-fast";
     return (
         <div>
-            <Moment className={"absolute text-white top-center text-2xl pointer-events-none mt-5" + fade} format="MMM Do YYYY">{post.published_at}</Moment>
-            <p className={"absolute text-white center text-3xl text-center pointer-events-none" + fade}>{post.title}</p>
+            <Moment className={"absolute text-white top-center blog-card-date pointer-events-none mt-5" + fade} format="MMM Do YYYY">{post.published_at}</Moment>
+            <p className={"absolute text-white center blog-card-title text-center pointer-events-none" + fade}>{post.title}</p>
         </div>
     );
 }

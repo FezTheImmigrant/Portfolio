@@ -13,18 +13,18 @@ export default function BlogPostContainer() {
       {({ data: { post } }) => {
         return (
           <div className="bg-black min-h-screen pt-20">
-            <div className="flex fade-in-no-delay">
-              <h1 className="text-white text-6xl ml-48 w-2/5 absolute transform translate-y-32 z-10">{post.title}</h1>
-              <img className="w-2/3 ml-auto mr-5 transform translate-y-20" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />
+            <div className="fade-in-no-delay">
+              <h1 className="w-full flex justify-center sm:absolute transform sm:translate-y-32 sm:-translate-x-32 z-10 text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl">{post.title}</h1>
+              <img className="sm:w-2/3 w-4/5 sm:ml-auto sm:mr-5 sm:mt-0 mt-5 sm:mx-0 mx-auto transform sm:translate-y-20 sm:opacity-75" src={process.env.REACT_APP_BACKEND_URL + post.image.url} />
             </div>
-            <div className="custom-black mx-24 mb-10 flex">
-              <div className="w-full ml-20 pt-48">
-                <div className="text-white fade-in-short-delay">
+            <div className="custom-black lg:mx-24 md:mx-20 sm:mx-10 mx-2 sm:rounded-none rounded-lg sm:mt-0 mt-5 mb-10 md:flex">
+              <div className="w-full lg:mx-20 md:mx-10 mx-5 lg:pt-48 md:pt-32 sm:pt-10">
+                <div className="text-white fade-in-short-delay sm:text-md text-sm">
                   Date Created
                 </div>
                 <Moment className="text-gray-700 text-sm fade-in-short-delay" format="MMM Do YYYY">{post.published_at}</Moment>
               </div>
-              <ReactMarkdown className="text-gray-400 mr-40 pt-48 py-20 text-l fade-in-short-delay" source={post.content} />
+              <ReactMarkdown className="text-gray-400 md:mr-10 lg:pt-48 md:pt-32 pt-5 md:mx-0 mx-2 lg:text-lg text-sm fade-in-short-delay" source={post.content} />
             </div>
 
 

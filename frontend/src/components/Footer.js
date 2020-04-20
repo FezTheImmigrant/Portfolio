@@ -11,7 +11,7 @@ import Mail from '../resources/svg/mail-icon.svg'
 export default class Footer extends Component {
     render() {
         return (
-            <div className="h-1/4 custom-black min-h-full mt-20 fade-in-no-delay">
+            <div className="custom-black min-h-full mt-20 fade-in-no-delay">
                 <div className="flex justify-center w-full">
                     <div className="bound:mx-0 mt-5 flex">
                         <a href="https://medium.com/@sorozco0612" className="w-10 h-10 bound:mx-5 mx-2">
@@ -45,7 +45,7 @@ export default class Footer extends Component {
                     </div>
                 </div>
                 <div className="width-full flex justify-center text-white text-l mt-5">
-                    {' \u00a9 Sergio Orozco'}
+                    {' \u00a9 2020 Sergio Orozco'}
                 </div>
                 
             </div>
