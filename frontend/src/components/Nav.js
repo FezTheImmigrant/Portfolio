@@ -30,10 +30,7 @@ export class Nav extends Component {
           </button>
 
         </div>
-        {this.state.open && (
-          <Menu className="fade-in-no-delay-fast" />
-        )}
-
+        <Menu open={this.state.open} />
       </React.Fragment>
     );
   }

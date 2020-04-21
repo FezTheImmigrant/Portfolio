@@ -44,7 +44,7 @@ export default class Footer extends Component {
                         </a>
                     </div>
                 </div>
-                <div className="width-full flex justify-center text-white text-l mt-5">
+                <div className="width-full flex justify-center text-white text-l mt-5 sm:pb-3">
                     {' \u00a9 2020 Sergio Orozco'}
                 </div>
                 

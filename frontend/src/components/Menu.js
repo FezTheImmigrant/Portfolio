@@ -31,8 +31,12 @@ export class Menu extends Component {
         }));
     }
     render() {
+
+        var menuOpenClassName = this.props.open ? " opacity-fade-in" : " opacity-fade-out"
+        console.log(menuOpenClassName)
+
         return (
-            <div className=" w-full mt-20 z-10 fade-in-no-delay-fast fixed">
+            <div className={"w-full mt-20 z-10 fixed" + menuOpenClassName}>
                 <div className="ml-auto flex justify-end rounded-md">
                     <div className=" black_transparent mr-5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
                         <div className="sm:flex">
