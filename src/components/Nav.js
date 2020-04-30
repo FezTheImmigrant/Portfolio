@@ -26,7 +26,7 @@ export class Nav extends Component {
                         hover:no-underline" href="/">S</a>
           </div>
           <button className="bound:mr-5 mr-10 mt-8 focus:outline-none" onClick={this.handleButtonClick}>
-            <img src={Hamburger} />
+            <img src={Hamburger} alt="" />
           </button>
 
         </div>

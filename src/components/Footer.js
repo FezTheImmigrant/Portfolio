@@ -15,40 +15,39 @@ export default class Footer extends Component {
             <div className="custom-black min-h-full mt-20 fade-in-no-delay">
                 <div className="flex justify-center w-full">
                     <div className="bound:mx-0 mt-5 flex">
-                        <a href="https://medium.com/@sorozco0612" className="w-10 h-10 bound:mx-5 mx-2">
-                            <img src={Medium} />
+                        <a href="https://medium.com/@sorozco0612" className="w-10 h-10 bound:mx-5 mx-2" >
+                            <img src={Medium} alt="Medium"/>
                         </a>
-                        <a href="https://github.com/FezTheImmigrant" className="w-16 h-10 bound:mx-5 mx-2 transform -translate-y-2">
-                            <img src={Github} />
+                        <a href="https://github.com/FezTheImmigrant" className="w-16 h-10 bound:mx-5 mx-2 transform -translate-y-2" >
+                            <img src={Github} alt="Github"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/sergio-orozco-51b057159/" className="w-10 h-10 bound:mx-5 mx-2">
-                            <img src={LinkedIn} />
+                        <a href="https://www.linkedin.com/in/sergio-orozco-51b057159/" className="w-10 h-10 bound:mx-5 mx-2" >
+                            <img src={LinkedIn} alt="LinkedIn"/>
                         </a>
                         <a className="bound:mx-5 mx-2 w-10 h-8" href={pdf}>
-                            <img className="w-full h-full" src={File} />
+                            <img className="w-full h-full" src={File} alt="Resume" />
                         </a>
                         <a href="/contact" className="bound:mx-5 mx-2 w-10 h-8 mt-1">
-                            <img className="w-full h-full" src={Mail} />
+                            <img className="w-full h-full" src={Mail} alt="Contact" />
                         </a>
                     </div>
                 </div>
                 <div className="flex justify-center w-full">
                     <div className="flex mt-5">
                         <a href="https://www.python.org" className="logo-size mx-5 opacity-75">
-                            <img src={Python} />
+                            <img src={Python} alt="Python" />
                         </a>
                         <a href="https://scikit-learn.org/stable/" className="scikit-logo-size mx-5 opacity-75">
-                            <img src={Scikit} />
+                            <img src={Scikit} alth="Scikit-Learn" />
                         </a>
                         <a href="https://www.tensorflow.org/" className="logo-size mx-5 opacity-75">
-                            <img src={Tensorflow} />
+                            <img src={Tensorflow} alt="Tensorflow" />
                         </a>
                     </div>
                 </div>
                 <div className="width-full flex justify-center text-white text-l mt-5 sm:pb-3">
                     {' \u00a9 2020 Sergio Orozco'}
                 </div>
-                
             </div>
         )
     }

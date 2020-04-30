@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 
 export class Articles extends Component {
     render() {
@@ -10,7 +9,7 @@ export class Articles extends Component {
                     {articles.map((article, i) => {
                         return (
                             <li className="mx-10 menu-pulse "id={i}>
-                                <a className="hover:no-underline" href={article.url} target="_blank">
+                                <a className="hover:no-underline" href={article.url}>
                                     <p className="text-gray hover:text-white">
                                         {article.title}
                                     </p>

@@ -18,7 +18,7 @@ class Contact extends Component {
                     </div>
                 </div>
                 <div className="flex justify-center sm:visible invisible arrow-pulse absolute inset-x-0 bottom-0">
-                    <img className="" src={DownArrow} />
+                    <img className="" src={DownArrow} alt="" />
                 </div>
             </React.Fragment>
         )
