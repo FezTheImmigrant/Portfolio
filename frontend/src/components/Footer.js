@@ -7,6 +7,7 @@ import LinkedIn from '../resources/linkedin.png';
 import Github from '../resources/github.png';
 import File from '../resources/svg/file-icon.svg';
 import Mail from '../resources/svg/mail-icon.svg'
+import pdf from '../resources/Resume.pdf';
 
 export default class Footer extends Component {
     render() {
@@ -23,7 +24,7 @@ export default class Footer extends Component {
                         <a href="https://www.linkedin.com/in/sergio-orozco-51b057159/" className="w-10 h-10 bound:mx-5 mx-2">
                             <img src={LinkedIn} />
                         </a>
-                        <a className="bound:mx-5 mx-2 w-10 h-8">
+                        <a className="bound:mx-5 mx-2 w-10 h-8" href={pdf}>
                             <img className="w-full h-full" src={File} />
                         </a>
                         <a href="/contact" className="bound:mx-5 mx-2 w-10 h-8 mt-1">

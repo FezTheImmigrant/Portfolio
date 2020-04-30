@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HeadShot from '../resources/headshot.png'
+import HeadShot from '../resources/headshot-teeth.jpg'
 import BlogHeader from '../resources/blog.gif'
 import Article from '../resources/article.gif'
 import Articles from '../components/Articles'
