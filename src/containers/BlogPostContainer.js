@@ -1,3 +1,4 @@
+import React from "react"
 import { useParams } from "react-router";
 import Query from "../components/Query";
 import ReactMarkdown from "react-markdown";

@@ -38,7 +38,7 @@ export default class Footer extends Component {
                             <img src={Python} alt="Python" />
                         </a>
                         <a href="https://scikit-learn.org/stable/" className="scikit-logo-size mx-5 opacity-75">
-                            <img src={Scikit} alth="Scikit-Learn" />
+                            <img src={Scikit} alt="Scikit-Learn" />
                         </a>
                         <a href="https://www.tensorflow.org/" className="logo-size mx-5 opacity-75">
                             <img src={Tensorflow} alt="Tensorflow" />
