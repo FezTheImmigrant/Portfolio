@@ -7,18 +7,6 @@ import Contact from '../resources/contact.gif';
 import Query from "../components/Query";
 import MEDIUM_ARTICLES_LINK_QUERY from "../queries/MediumArticleLinkQuery";
 
-function ToggleArticles(props) {
-    var articles = props.articles;
-    var isToggledOn = props.isArticleListToggledOn;
-
-    if (isToggledOn) {
-        return (<Articles articles={articles}/>);
-    }
-
-    return <React.Fragment/>
-    
-}
-
 export class Menu extends Component {
 
     state = {
@@ -33,43 +21,40 @@ export class Menu extends Component {
     render() {
 
         var menuOpenClassName = this.props.open ? " opacity-fade-in" : " opacity-fade-out pointer-events-none"
+        var articleOpenClassName = this.state.isArticleListToggledOn ? " opacity-fade-in" : " opacity-fade-out pointer-events-none"
 
         return (
             <div className={"w-full mt-20 z-10 fixed" + menuOpenClassName}>
                 <div className="ml-auto flex justify-end rounded-md">
-                    <div className=" black_transparent mr-5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
-                        <div className="sm:flex">
-                            <a href="/" className="hover:no-underline sm:w-1/2 w-full">
-                                <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md " style={headShotStyle}>
-                                    <h1 className='text-white text-center py-10 text-3xl'>Home</h1>
-                                </div>
-                            </a>
-                            <a href="/blog" className="hover:no-underline sm:w-1/2 w-full">
-                                <div className=" ml-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={blogHeaderStyle}>
-                                    <h1 className='text-white text-center py-10 text-3xl'>Blog</h1>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="sm:flex mt-1">
-                            <button onClick={this.handleClick} className="hover:no-underline sm:w-1/2 w-full focus:outline-none">
-                                <div className=" mr-1 bg-center bg-cover bg-auto h-32 menu-pulse rounded-md" style={articleStyle}>
-                                    <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
-                                </div>
-                            </button>
-                            <a href="/contact" className="hover:no-underline sm:w-1/2 w-full">
-                                <div className="m1-1 bg-center bg-cover h-32 menu-pulse rounded-md" style={contactStyle}>
-                                    <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
-                                </div>
-                            </a>
+                    <div className="rounded-md mr-5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
+                        <a href="/" className="hover:no-underline h-1/5">
+                            <div className=" mr-1 bg-center bg-cover bg-auto menu-pulse rounded-md " style={headShotStyle}>
+                                <h1 className='text-white text-center py-10 text-3xl'>Home</h1>
+                            </div>
+                        </a>
+                        <a href="/blog" className="hover:no-underline h-1/5">
+                            <div className=" ml-1 bg-center bg-cover menu-pulse rounded-md" style={blogHeaderStyle}>
+                                <h1 className='text-white text-center py-10 text-3xl'>Blog</h1>
+                            </div>
+                        </a>
+                        <button onClick={this.handleClick} className="hover:no-underline w-full focus:outline-none h-1/5">
+                            <div className=" mr-1 bg-center bg-cover bg-auto menu-pulse rounded-md" style={articleStyle}>
+                                <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
+                            </div>
+                        </button>
+                        <a href="/contact" className="hover:no-underline h-1/5">
+                            <div className="m1-1 bg-center bg-cover menu-pulse rounded-md" style={contactStyle}>
+                                <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
+                            </div>
+                        </a>
+                        <div className={"flex justify-end h-1/5" + articleOpenClassName}>
+                            <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
+                                {({ data: { articles } }) => {
+                                    return (<Articles articles={articles}/>);
+                                }}
+                            </Query>
                         </div>
                     </div>
-                </div>
-                <div className="flex justify-end mr-5">
-                    <Query query={MEDIUM_ARTICLES_LINK_QUERY}>
-                        {({ data: { articles } }) => {
-                            return (<ToggleArticles articles={articles} isArticleListToggledOn={this.state.isArticleListToggledOn} />);
-                        }}
-                    </Query>
                 </div>
             </div>
         )
