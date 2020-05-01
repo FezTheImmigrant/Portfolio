@@ -32,8 +32,7 @@ export class Menu extends Component {
     }
     render() {
 
-        var menuOpenClassName = this.props.open ? " opacity-fade-in" : " opacity-fade-out"
-        console.log(menuOpenClassName)
+        var menuOpenClassName = this.props.open ? " opacity-fade-in" : " opacity-fade-out pointer-events-none"
 
         return (
             <div className={"w-full mt-20 z-10 fixed" + menuOpenClassName}>

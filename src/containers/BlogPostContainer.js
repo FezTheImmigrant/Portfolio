@@ -15,7 +15,7 @@ export default function BlogPostContainer() {
           <div className="bg-black min-h-screen pt-20">
             <div className="fade-in-no-delay">
               <h1 className="w-full flex justify-center sm:absolute transform sm:translate-y-32 sm:-translate-x-32 z-10 text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl">{post.title}</h1>
-              <img className="sm:w-2/3 w-4/5 sm:ml-auto sm:mr-5 sm:mt-0 mt-5 sm:mx-0 mx-auto transform sm:translate-y-20 sm:opacity-75" src={process.env.REACT_APP_BACKEND_URL + post.image.url} alt="" />
+              <img className="sm:w-2/3 w-4/5 sm:ml-auto sm:mr-5 sm:mt-0 mt-5 sm:mx-0 mx-auto transform sm:translate-y-20 sm:opacity-75" src={"https://floating-plains-52077.herokuapp.com/"+ post.image.url} alt="" />
             </div>
             <div className="custom-black lg:mx-24 md:mx-20 sm:mx-10 mx-2 sm:rounded-none rounded-lg sm:mt-0 mt-5 mb-10 md:flex">
               <div className="w-full lg:mx-20 md:mx-10 mx-5 lg:pt-48 md:pt-32 sm:pt-10">
