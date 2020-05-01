@@ -65,7 +65,7 @@ export class Card extends Component {
                             className={"rounded-md w-full h-full" + (window.innerWidth < 1024 ? (this.state.isInView || this.state.isMouseOverImage ? " opacity-fade-out-50": " opacity-fade-in") : this.state.isMouseOverImage ? " opacity-fade-out-50" : " opacity-fade-in")}
                             onMouseEnter={this.handleHover}
                             onMouseOut={this.handleUnHover}
-                            src={"http://localhost:1337" + post.image.url}
+                            src={"https://floating-plains-52077.herokuapp.com/" + post.image.url}
                             alt={post.image.url}
                         />
                     </a>
