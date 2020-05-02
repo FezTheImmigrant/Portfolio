@@ -22,6 +22,7 @@ export class Menu extends Component {
 
         var menuOpenClassName = this.props.open ? " opacity-fade-in" : " opacity-fade-out pointer-events-none"
         var articleOpenClassName = this.state.isArticleListToggledOn ? " opacity-fade-in" : " opacity-fade-out pointer-events-none"
+        document.body.style.overflow = this.state.isArticleListToggledOn ? "hidden" : "visible"
 
         return (
             <div className={"w-full mt-20 z-10 fixed" + menuOpenClassName}>

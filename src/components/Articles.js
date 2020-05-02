@@ -4,13 +4,13 @@ export class Articles extends Component {
     render() {
         const articles = this.props.articles;
         return (
-            <div className="text-2xl bg-black rounded-md  border border-white text-right fade-in-no-delay pt-2 w-full">
-                <ul className=" h-40 overflow-hidden overflow-y-scroll mr-1" id="style-1">
+            <div className="text-xl bg-black rounded-md  border border-white text-right fade-in-no-delay pt-2 w-full">
+                <ul className=" max-h-40 min-h-20 overflow-hidden overflow-y-scroll mr-1" id="style-1">
                     {articles.map((article, i) => {
                         return (
-                            <li className="mx-10 menu-pulse "id={i}>
+                            <li className="mx-1 menu-pulse "id={i}>
                                 <a className="hover:no-underline" href={article.url}>
-                                    <p className="text-gray hover:text-white">
+                                    <p className="text-gray hover:text-white text-center">
                                         {article.title}
                                     </p>
                                 </a>
