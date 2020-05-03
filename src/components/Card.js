@@ -65,8 +65,8 @@ export class Card extends Component {
                             className={"rounded-md w-full h-full" + (window.innerWidth < 1024 ? (this.state.isInView || this.state.isMouseOverImage ? " opacity-fade-out-50": " opacity-fade-in") : this.state.isMouseOverImage ? " opacity-fade-out-50" : " opacity-fade-in")}
                             onMouseEnter={this.handleHover}
                             onMouseOut={this.handleUnHover}
-                            src={"https://floating-plains-52077.herokuapp.com/" + post.image.url}
-                            alt={post.image.url}
+                            src={post.image.url}
+                            alt={post.title + "Cover Image"}
                         />
                     </a>
                     <ToggleTitle isMouseOverImage={this.state.isMouseOverImage} isInView={this.state.isInView} post={post} />
