@@ -34,7 +34,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "build:style" : "tailwind build src/assets/tailwind.css -o src/assets/main.css",
+    "build:style": "tailwind build src/assets/tailwind.css -o src/assets/main.css",
     "start": "yarn run build:style && react-scripts start",
     "build": "yarn run react-scripts build",
     "test": "react-scripts test",
