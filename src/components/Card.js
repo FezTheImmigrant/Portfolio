@@ -66,7 +66,7 @@ export class Card extends Component {
                             onMouseEnter={this.handleHover}
                             onMouseOut={this.handleUnHover}
                             src={post.image.url}
-                            alt={post.title + "Cover Image"}
+                            alt={post.image.url}
                         />
                     </a>
                     <ToggleTitle isMouseOverImage={this.state.isMouseOverImage} isInView={this.state.isInView} post={post} />
