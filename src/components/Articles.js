@@ -9,7 +9,7 @@ export class Articles extends Component {
                     {articles.map((article, i) => {
                         return (
                             <li className="mx-1 menu-pulse "id={i}>
-                                <a className="hover:no-underline" href={article.url}>
+                                <a className="hover:no-underline" target="_blank" rel="noopener noreferrer" href={article.url}>
                                     <p className="text-gray hover:text-white text-center">
                                         {article.title}
                                     </p>
