@@ -27,7 +27,7 @@ export default class Footer extends Component {
                         <a className="bound:mx-5 mx-2 w-10 h-8" target="_blank" rel="noopener noreferrer" href={pdf}>
                             <img className="w-full h-full" src={File} alt="Resume" />
                         </a>
-                        <a href="/contact" target="_blank" rel="noopener noreferrer" className="bound:mx-5 mx-2 w-10 h-8 mt-1">
+                        <a href="/contact" className="bound:mx-5 mx-2 w-10 h-8 mt-1">
                             <img className="w-full h-full" src={Mail} alt="Contact" />
                         </a>
                     </div>
