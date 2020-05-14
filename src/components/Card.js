@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import Moment from "react-moment";
+import LazyLoad from 'react-lazy-load';
+import ImageLoader from './ImageLoader'
 
 function ToggleTitle(props) {
     var isMouseOverImage = props.isMouseOverImage;
     var isInView = props.isInView
     var post = props.post;
 
-    var fade = isMouseOverImage || (window.innerWidth < 1024 && isInView) ? " fade-in-no-delay-fast" : " fade-out-no-delay-fast";
+    var fade = isMouseOverImage || (window.innerWidth < 1024 && isInView) ? " opacity-fade-in" : " opacity-fade-out";
     return (
         <div>
             <Moment className={"absolute text-white top-center blog-card-date pointer-events-none mt-5" + fade} format="MMM Do YYYY">{post.published_at}</Moment>
@@ -16,6 +18,9 @@ function ToggleTitle(props) {
 }
 
 function isScrolledIntoView(elem) {
+    if (elem === null) {
+        return;
+    }
     var rect = elem.getBoundingClientRect();
     var elemTop = rect.top;
     var elemBottom = rect.bottom;
@@ -31,7 +36,8 @@ export class Card extends Component {
     }
     state = {
         isMouseOverImage: false,
-        isInView: false
+        isInView: false,
+        loaded: false,
     };
 
     handleHover = () => {
@@ -48,8 +54,13 @@ export class Card extends Component {
         var elem = document.getElementById("card"+this.props.post.id);
 
         this.setState( state => ({
-            isInView: isScrolledIntoView(elem)
+           isInView: isScrolledIntoView(elem)
         }));
+    }
+
+    onLoad = () => {
+        this.setState(() => ({loaded: true}));
+        console.log("image loaded")
     }
 
     render() {
@@ -57,18 +68,33 @@ export class Card extends Component {
         const position = this.props.isLeft ? " lg:translate-x-10" : " lg:-translate-x-10";
         const margin = this.props.isLeft ? " mt-10" : " mt-20"
 
+        var fade = ""
+
+        if ((window.innerWidth < 1024 && this.state.isInView) || this.state.isMouseOverImage) {
+            fade = "image-darken"
+        }
+        else {
+            fade = "image-brighten"
+        }
+
         return (
             <div className={"lg:w-1/2 w-full flex justify-center transform" + position}>
                 <div className={"relative blog-card" + margin}>
-                    <a href={`/post/${post.id}`} id={"card"+post.id}>
-                        <img
-                            className={"rounded-md w-full h-full" + (window.innerWidth < 1024 ? (this.state.isInView || this.state.isMouseOverImage ? " opacity-fade-out-50": " opacity-fade-in") : this.state.isMouseOverImage ? " opacity-fade-out-50" : " opacity-fade-in")}
-                            onMouseEnter={this.handleHover}
-                            onMouseOut={this.handleUnHover}
-                            src={post.image.url}
-                            alt={post.image.url}
-                        />
-                    </a>
+                    
+                    <LazyLoad
+                    debounce={false}
+                    throttle={250}>
+                        <a href={`/post/${post.id}`} id={"card" + post.id}>
+                            <ImageLoader
+                                className = {"rounded-md " + fade}
+                                onMouseEnter={this.handleHover}
+                                onMouseOut={this.handleUnHover}
+                                onLoad={this.onLoad}
+                                src={post.image.url}
+                                alt={post.title}
+                            />
+                        </a>
+                    </LazyLoad>
                     <ToggleTitle isMouseOverImage={this.state.isMouseOverImage} isInView={this.state.isInView} post={post} />
                 </div>
             </div>

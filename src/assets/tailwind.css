@@ -21,6 +21,7 @@ p {
 .image-pulse {
     transition: transform 4s;
 }
+
 .menu-pulse {
     transition: transform 500ms;
 }
@@ -56,14 +57,21 @@ p {
 
 }
 
+.image-brighten{
+    filter: brightness(100%);
+    transition: filter 500ms linear;
+}
+
+.image-darken {
+    filter: brightness(50%);
+    transition: filter 500ms linear;
+}
+
 .opacity-fade-in {
     opacity: 1;
     transition: opacity 1s linear;
 }
-.opacity-fade-out-50 {
-    opacity: 0.5;
-    transition: opacity 1s linear;
-}
+
 .opacity-fade-out {
     opacity: 0;
     transition: opacity 1s linear;

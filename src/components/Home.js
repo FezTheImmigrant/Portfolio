@@ -16,11 +16,11 @@ export class Home extends Component {
                         but I'm a dedicated practicioner of Machine Learning outside of
                             the workplace. This website is home to my studies and achievements.</h3>
                     </div>
-                    <img className="headshot fade-in-short-delay transform xl:-translate-x-20 lg:-translate-x-10 md:-translate-y-48 mx-auto z-0" alt="" src={HeadShot} />
+                    <img className="headshot fade-in-short-delay transform xl:-translate-x-20 lg:-translate-x-10 md:-translate-y-48 mx-auto z-0" alt="Headshot" src={HeadShot} />
 
                 </div>
                 <div className="flex justify-center arrow-pulse md:visible invisible absolute inset-x-0 bottom-0">
-                    <img className="" src={DownArrow} alt="" />
+                    <img className="" src={DownArrow} alt="Scroll Indicator" />
                 </div>
             </React.Fragment>
         )
