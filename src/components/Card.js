@@ -39,7 +39,6 @@ export class Card extends Component {
     state = {
         isMouseOverImage: false,
         isInView: false,
-        loaded: false,
     };
 
     handleHover = () => {
@@ -58,11 +57,6 @@ export class Card extends Component {
         this.setState( state => ({
            isInView: isScrolledIntoView(elem)
         }));
-    }
-
-    onLoad = () => {
-        this.setState(() => ({loaded: true}));
-        console.log("image loaded")
     }
 
     render() {
@@ -91,7 +85,6 @@ export class Card extends Component {
                                     className={"rounded-md " + fade}
                                     onMouseEnter={this.handleHover}
                                     onMouseOut={this.handleUnHover}
-                                    onLoad={this.onLoad}
                                     src={post.image.url}
                                     alt={post.title}
                                 />
