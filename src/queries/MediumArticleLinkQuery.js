@@ -7,6 +7,9 @@ query Articles {
         id
         title
         url
+        image {
+            url
+        }
     }
 }
 `;

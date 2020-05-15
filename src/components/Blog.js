@@ -10,7 +10,7 @@ export class Blog extends Component {
         return (
             <div className="lg:flex flex-wrap">
                 {posts.map((post, i) => {
-                    return <Card post={post} isLeft={i % 2 === 0} key={`posts_${post.id}`} />
+                    return <Card post={post} dataType={this.props.dataType} isLeft={i % 2 === 0} key={`posts_${post.id}`} />
                 })}
             </div>
         );

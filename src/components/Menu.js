@@ -29,22 +29,22 @@ export class Menu extends Component {
                     <div className="rounded-md mr-5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
                         <a href="/" className="hover:no-underline h-1/5">
                             <div className=" mr-1 bg-center bg-cover bg-auto menu-pulse rounded-md " style={headShotStyle}>
-                                <h1 className='text-white text-center py-10 text-3xl'>Home</h1>
+                                <p className='text-white text-center py-10 text-3xl'>Home</p>
                             </div>
                         </a>
                         <a href="/blog" className="hover:no-underline h-1/5">
                             <div className=" ml-1 bg-center bg-cover menu-pulse rounded-md" style={blogHeaderStyle}>
-                                <h1 className='text-white text-center py-10 text-3xl'>Blog</h1>
+                                <p className='text-white text-center py-10 text-3xl'>Blog</p>
                             </div>
                         </a>
                         <button onClick={this.handleClick} className="hover:no-underline w-full focus:outline-none h-1/5">
                             <div className=" mr-1 bg-center bg-cover bg-auto menu-pulse rounded-md" style={articleStyle}>
-                                <h1 className='text-white text-center py-10 text-3xl'>Articles</h1>
+                                <p className='text-white text-center py-10 text-3xl'>Articles</p>
                             </div>
                         </button>
                         <a href="/contact" className="hover:no-underline h-1/5">
                             <div className="m1-1 bg-center bg-cover menu-pulse rounded-md" style={contactStyle}>
-                                <h1 className='text-white text-center py-10 text-3xl'>Contact</h1>
+                                <p className='text-white text-center py-10 text-3xl'>Contact</p>
                             </div>
                         </a>
                         <div className={"flex justify-end h-1/5" + articleOpenClassName}>
