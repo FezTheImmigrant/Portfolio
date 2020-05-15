@@ -10,7 +10,7 @@ export class Articles extends Component {
                         return (
                             <li className="mx-1 menu-pulse "id={i}>
                                 <a className="hover:no-underline" target="_blank" rel="noopener noreferrer" href={article.url}>
-                                    <p className="text-gray hover:text-white text-center">
+                                    <p className="text-gray-500 hover:text-white text-center">
                                         {article.title}
                                     </p>
                                 </a>
