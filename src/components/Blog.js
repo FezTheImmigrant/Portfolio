@@ -8,9 +8,9 @@ export class Blog extends Component {
         const posts = this.props.posts;
 
         return (
-            <div className="lg:flex flex-wrap">
+            <div className="lg:flex flex-wrap justify-center">
                 {posts.map((post, i) => {
-                    return <Card post={post} dataType={this.props.dataType} isLeft={i % 2 === 0} key={`posts_${post.id}`} />
+                    return <Card post={post} dataType={this.props.dataType} key={`posts_${post.id}`} />
                 })}
             </div>
         );

@@ -7,7 +7,7 @@ class Contact extends Component {
             <React.Fragment>
                 <div className="w-full mx-auto py-auto text-center text-white lg:text-6xl md:text-5xl sm:text-4xl text-2xl pt-56 min-h-screen fade-in-no-delay">
                     <a href="mailto:sorozco0612@yahoo.com" className="hover:text-white">
-                        <h1 className="text-white">
+                        <h1 className="text-white underline">
                             sorozc0612@yahoo.com
                         </h1>
                     </a>
@@ -20,7 +20,7 @@ class Contact extends Component {
                         </h2>
 
                         <a href="tel:7195025692" className="mt-10 hover:text-white bold">
-                            <h2 className= "text-white">
+                            <h2 className= "text-white underline">
                                 +1 (719) 502-5692
                             </h2>
                         </a>

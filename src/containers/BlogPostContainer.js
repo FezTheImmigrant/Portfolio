@@ -15,10 +15,10 @@ export default function BlogPostContainer() {
           <div className="bg-black min-h-screen pt-20">
             <div className="fade-in-no-delay">
               <h1 className="w-full flex justify-center sm:absolute transform sm:translate-y-32 sm:-translate-x-32 z-10 text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl">{post.title}</h1>
-              <img className="sm:w-2/3 w-4/5 sm:ml-auto sm:mr-5 sm:mt-0 mt-5 sm:mx-0 mx-auto transform sm:translate-y-20 sm:opacity-75" src={post.image.url} alt={post.title} />
+              <img className="max-w-xl relative w-8/12 rounded-md sm:ml-auto sm:mr-32 sm:mt-0 mt-5 sm:mx-0 mx-auto transform sm:translate-y-20 sm:opacity-75" src={post.image.url} alt={post.title} />
             </div>
             <div className="custom-black lg:mx-24 md:mx-20 sm:mx-10 mx-2 sm:rounded-none rounded-lg sm:mt-0 mt-5 mb-10 md:flex">
-              <div className="w-full lg:mx-20 md:mx-10 mx-5 lg:pt-48 md:pt-32 sm:pt-10">
+              <div className="w-full lg:mx-20 md:mx-10 mx-5 lg:pt-48 md:pt-32 sm:pt-32">
                 <div className="text-white fade-in-short-delay sm:text-md text-sm">
                   Date Created
                 </div>

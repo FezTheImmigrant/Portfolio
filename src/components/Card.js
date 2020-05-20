@@ -61,9 +61,6 @@ export class Card extends Component {
 
     render() {
         const post = this.props.post;
-        const position = this.props.isLeft ? " lg:translate-x-10" : " lg:-translate-x-10";
-        const margin = this.props.isLeft ? " mt-10" : " mt-20"
-
         var fade = ""
 
         if ((window.innerWidth < 1024 && this.state.isInView) || this.state.isMouseOverImage) {
@@ -74,8 +71,8 @@ export class Card extends Component {
         }
 
         return (
-            <div className={"lg:max-w-2xl flex justify-center transform" + position}>
-                <div className={"relative w-8/12" + margin}>
+            <div className="max-w-2xl flex justify-center mt-10">
+                <div className="relative w-8/12">
                     {this.props.dataType === "blog" && 
                         <LazyLoad
                             debounce={false}
