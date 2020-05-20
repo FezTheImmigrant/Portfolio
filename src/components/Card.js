@@ -74,7 +74,7 @@ export class Card extends Component {
         }
 
         return (
-            <div className={"lg:w-1/2 w-full flex justify-center transform" + position}>
+            <div className={"lg:max-w-2xl flex justify-center transform" + position}>
                 <div className={"relative w-8/12" + margin}>
                     {this.props.dataType === "blog" && 
                         <LazyLoad
