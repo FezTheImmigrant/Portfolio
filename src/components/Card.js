@@ -11,9 +11,6 @@ function ToggleTitle(props) {
     var fade = isMouseOverImage || (window.innerWidth < 1024 && isInView) ? " opacity-fade-in" : " opacity-fade-out";
     return (
         <div>
-            {props.dataType === "blog" &&
-                <Moment className={"absolute text-white top-center blog-card-date pointer-events-none mt-5" + fade} format="MMM Do YYYY">{post.published_at}</Moment>
-            }
             <h3 className={"absolute center text-white blog-card-title text-center pointer-events-none" + fade}>{post.title}</h3>
         </div>
     );
